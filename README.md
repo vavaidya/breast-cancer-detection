@@ -13,3 +13,7 @@ Breast cancer is one of the main causes of cancer death worldwide. Early diagnos
 The image dataset consists of 400 H&E stain images (2048 × 1536 pixels). All the images are digitized with the same acquisition conditions, with a magnification of 200 × and pixel size of 0.42 µm × 0.42 µm. Each image is labeled with one of the four balanced classes: *normal, benign, in situ, and invasive*, where class is defined as a predominant cancer type in the image.
 ![classes](https://github.com/vavaidya/breast-cancer-detection/blob/master/class_example.png)
 Examples of microscopic biopsy images in the dataset: (A) normal; (B) benign; (C) in situ carcinoma; and (D) invasive carcinoma
+
+## PRE-PROCESSING AND FEATURE EXTRACTION
+To bring the microscopy images into a common space, the amount of H&E stained on the tissue is normalised. For each image, 50 random color augmentations are performed. From every image 20 random crops extracted and encoded into 20 descriptors. Then, the set of 20 descriptors is combined into a single descriptor. For features extraction, standard pre-trained ResNet-50, InceptionV3 and VGG-16 networks are used from Keras distribution.
+![preprocessing](https://github.com/vavaidya/breast-cancer-detection/blob/master/Preprocessing_pipeline.png)

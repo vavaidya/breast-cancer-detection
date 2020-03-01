@@ -17,3 +17,16 @@ Examples of microscopic biopsy images in the dataset: (A) normal; (B) benign; (C
 ## PRE-PROCESSING AND FEATURE EXTRACTION
 To bring the microscopy images into a common space, the amount of H&E stained on the tissue is normalised. For each image, 50 random color augmentations are performed. From every image 20 random crops extracted and encoded into 20 descriptors. Then, the set of 20 descriptors is combined into a single descriptor. For features extraction, standard pre-trained ResNet-50, InceptionV3 and VGG-16 networks are used from Keras distribution.
 ![preprocessing](https://github.com/vavaidya/breast-cancer-detection/blob/master/Preprocessing_pipeline.png)
+
+## METHOD
+In the first stage deep CNNs, trained on large and general datasets like ImageNet (10M images, 20K classes), are used for unsupervised feature extraction. This unsupervised dimensionality reduction step mitigates the risk of overfitting in the next stage of supervised learning.
+
+In the second stage we use [LightGBM](https://lightgbm.readthedocs.io/en/latest/) as a fast, distributed, high performance implementation of gradient boosted trees for supervised classification. Gradient boosting models are being extensively used in machine learning due to their speed, accuracy, and robustness against overfitting.
+
+## RESULTS
+For 2-class non-carcinomas (normal and benign) vs. carcinomas (in situ and invasive) classification accuracy was 93.8 ± 2.3%, the area under the ROC curve was 0.973. Out of 200 carcinomas cases only 9 in situ and 5 invasive were missed. For 4-class classification accuracy averaged across all folds was 87.2 ± 2.6%.
+
+## REPOSITORY DETAILS
+1. [Edge Detection of Cells](https://github.com/vavaidya/breast-cancer-detection/blob/master/Edge%20Detection%20and%20Hough%20Circle.ipynb)
+2. [CNN Feature Extractor](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/feature_extractor.py)
+3. [Light GBM](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/train_lgbm.py)

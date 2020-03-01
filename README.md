@@ -27,6 +27,7 @@ In the second stage we use [LightGBM](https://lightgbm.readthedocs.io/en/latest/
 For 2-class non-carcinomas (normal and benign) vs. carcinomas (in situ and invasive) classification accuracy was 93.8 ± 2.3%, the area under the ROC curve was 0.973. Out of 200 carcinomas cases only 9 in situ and 5 invasive were missed. For 4-class classification accuracy averaged across all folds was 87.2 ± 2.6%.
 
 ## REPOSITORY DETAILS
-1. [Edge Detection of Cells](https://github.com/vavaidya/breast-cancer-detection/blob/master/Edge%20Detection%20and%20Hough%20Circle.ipynb)
-2. [CNN Feature Extractor](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/feature_extractor.py)
-3. [Light GBM](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/train_lgbm.py)
+1. [Google Collab Setup](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/setup.ipynb)
+2. [Edge Detection of Cells](https://github.com/vavaidya/breast-cancer-detection/blob/master/Edge%20Detection%20and%20Hough%20Circle.ipynb)
+3. [CNN Feature Extractor](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/feature_extractor.py)
+4. [Light GBM](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/train_lgbm.py)

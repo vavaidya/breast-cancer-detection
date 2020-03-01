@@ -31,4 +31,4 @@ For 2-class non-carcinomas (normal and benign) vs. carcinomas (in situ and invas
 2. [Edge Detection of Cells](https://github.com/vavaidya/breast-cancer-detection/blob/master/Edge%20Detection%20and%20Hough%20Circle.ipynb) - Attempt at cell detection to use as a feature to distinguish b/w normal and infected cells
 3. [CNN Feature Extractor](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/feature_extractor.py) - VGG, INCEPTION and RESNET feature extractors with parameters
 4. [Light GBM](https://github.com/vavaidya/breast-cancer-detection/blob/master/ICIAR2018/train_lgbm.py) - Gradient Boosting model for extracted feature classification
-5. [Refer](https://github.com/alexander-rakhlin/ICIAR2018)
+5. [Reference](https://github.com/alexander-rakhlin/ICIAR2018)
